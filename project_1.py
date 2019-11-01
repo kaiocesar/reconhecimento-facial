@@ -23,6 +23,7 @@ while (True):
         if cv2.waitKey(1) & 0xFF == ord('q'):
             imagemFace = cv2.resize(imagemCinza[y:y + a, x:x + l], (largura, altura))
             cv2.imwrite("photos/pessoa.{0}.{1}.jpg".format(str(id), str(amostra)), imagemFace)
+            print("foto {0} capturada com sucesso".format( str(amostra)))
             amostra += 1
 
     cv2.imshow("Face", imagem)
