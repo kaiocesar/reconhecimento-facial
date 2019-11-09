@@ -19,7 +19,7 @@ while (True):
                                                      scaleFactor=1.5,
                                                      minSize=(150, 150))
 
-    # criamos o retangulo vermelho em volta da face                                                     
+    # criamos o retangulo vermelho em volta da face
     for(x, y, l, a) in facesDetectadas:
         cv2.rectangle(imagem, (x, y), (x + l, y + a), (0, 0, 255), 2)
 
@@ -38,7 +38,7 @@ while (True):
     if (amostra >= numeroAmostras+1):
         break
 
-print("Faces capturadas")    
+print("Faces capturadas")
 camera.release()
 cv2.destroyAllWindows()
 

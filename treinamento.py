@@ -20,4 +20,17 @@ def getImagemComId():
 
 ids, faces = getImagemComId()
 
-print(faces)
+print("Treinando....")
+
+#aprendizado supervisionado
+eigenface.train(faces, ids) # aqui vai fazer o treinamento
+
+eigenface.write("classificadorEigen.yml") # vamos usar esse arquivo posteriormente para fazer o reconhecimento facil
+
+fisherface.train(faces, ids)
+fisherface.write('classificadorFisher.yml')
+
+lbph.train(faces, ids)
+lbph.write('classificadorLBPH.yml')
+
+print("Treinamento finalizado...")
